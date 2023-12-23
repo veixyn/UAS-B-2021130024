@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Order')
+@section('title', 'Add Order')
 
 @section('content')
 
@@ -32,6 +32,7 @@
                 </div>
             </div>
             <br>
+            <button class="btn btn-success" type="button" onclick="addItem()">Add Item</button><br><br>
             <div class="d-flex justify-content-between" id="total-container">
                 <table cellpadding="5">
                     <tr>
@@ -58,7 +59,6 @@
                 Total Harga : <span id="total"><b>Rp. 0.00</b></span></p> --}}
             </div>
             <br>
-            <button class="btn btn-success" type="button" onclick="addItem()">Add Item</button>
             <button class="btn btn-primary" type="submit">Submit</button>
         </form>
     </div>

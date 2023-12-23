@@ -1,19 +1,31 @@
 @extends('layouts.master')
 
-@section('title', 'Items')
+@section('title', 'Items List')
 
 @section('content')
 
     <div class="mt-4 p-5 bg-black text-white rounded">
         <h1>All Items</h1>
-        <a href="{{ route('createOrder') }}" class="btn btn-primary btn-sm">Add New Item</a>
+        <a href="{{ route('items.create') }}" class="btn btn-primary btn-sm">Add New Item</a>
     </div>
 
     @if (session()->has('success'))
-    <div class="alert alert-success mt-4">
-        {{ session()->get('success') }}
+    <div
+        class="alert alert-primary alert-dismissible fade show mt-4"
+        role="alert"
+    >
+        <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+        ></button>
+        <strong>{{ session()->get('success') }}</strong>
     </div>
     @endif
+
+
+
 
     <div class="container mt-5">
         <table class="table table-bordered mb-5">
@@ -31,7 +43,7 @@
             <tbody>
                 @forelse ($items as $item)
                     <tr>
-                        <th scope="row">{{ $item->id }}</th>
+                        <th scope="row"><a href="{{route('items.show', $item)}}">{{ $item->id }}</th>
                         <td>{{ $item->nama }}</td>
                         <td>{{ $item->harga }}</td>
                         <td>{{ $item->stok }}</td>
@@ -62,5 +74,12 @@
             {!! $items->links() !!}
         </div>
     </div>
+
+    <script>
+        var alertList = document.querySelectorAll(".alert");
+        alertList.forEach(function (alert) {
+            new bootstrap.Alert(alert);
+        });
+    </script>
 
 @endsection

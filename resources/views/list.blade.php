@@ -10,9 +10,18 @@
 </div>
 
 @if (session()->has('success'))
-    <div class="alert alert-success mt-4">
-        {{ session()->get('success') }}
-    </div>
+<div
+class="alert alert-primary alert-dismissible fade show mt-4"
+role="alert"
+>
+<button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+></button>
+<strong>{{ session()->get('success') }}</strong>
+</div>
 @endif
 
 <div class="container mt-2">
@@ -45,5 +54,12 @@
         {!! $orders->links() !!}
     </div>
 </div>
+
+<script>
+    var alertList = document.querySelectorAll(".alert");
+    alertList.forEach(function (alert) {
+        new bootstrap.Alert(alert);
+    });
+</script>
 
 @endsection

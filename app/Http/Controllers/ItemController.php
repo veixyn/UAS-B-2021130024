@@ -81,7 +81,7 @@ class ItemController extends Controller
             'stok' => $validated['stok'],
         ]);
 
-        return redirect()->route('items.index')->with('success', 'Item added successfully.');
+        return redirect()->route('items.index')->with('success', 'Item updated successfully.');
     }
 
     /**

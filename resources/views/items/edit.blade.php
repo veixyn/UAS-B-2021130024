@@ -25,7 +25,7 @@
                 @csrf
                 <div class="mb-3 col-md-12 col-sm-12">
                     <label for="item_id" class="form-label">Item ID</label>
-                    <input type="text" class="form-control" id="item_id" name="item_id" value="{{ old('item_id', $item->id) }}">
+                    <input type="text" class="form-control" id="item_id" name="item_id" readonly value="{{ old('item_id', $item->id) }}">
                 </div>
                 <div class="mb-3 col-md-12 col-sm-12">
                     <label for="nama" class="form-label">Nama</label>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="mb-3 col-md-12 col-sm-12">
                     <label for="harga" class="form-label">Harga</label>
-                    <input type="number" class="form-control" id="harga" name="harga" value="{{ old('harga', $item->harga) }}">
+                    <input type="number" class="form-control" id="harga" name="harga" value="{{ old('harga', $item->harga) }}" min="1" step=".01">
                 </div>
                 <div class="mb-3 col-md-12 col-sm-12">
                     <label for="stok" class="form-label">Stok</label>

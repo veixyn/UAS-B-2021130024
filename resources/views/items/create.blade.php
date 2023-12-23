@@ -24,7 +24,7 @@
                 @csrf
                 <div class="mb-3 col-md-12 col-sm-12">
                     <label for="item_id" class="form-label">Item ID</label>
-                    <input type="text" class="form-control" id="item_id" name="item_id" value="{{ old('item_id') }}" maxlength="16">
+                    <input type="text" pattern="\d*" class="form-control" id="item_id" name="item_id" value="{{ old('item_id') }}" maxlength="16">
                 </div>
                 <div class="mb-3 col-md-12 col-sm-12">
                     <label for="nama" class="form-label">Nama</label>
