@@ -6,6 +6,7 @@
 
     <div class="mt-4 p-5 bg-black text-white rounded">
         <h1>All Items</h1>
+        <a href="{{ route('createOrder') }}" class="btn btn-primary btn-sm">Add New Item</a>
     </div>
 
     @if (session()->has('success'))

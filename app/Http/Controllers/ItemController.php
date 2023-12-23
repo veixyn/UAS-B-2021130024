@@ -32,7 +32,7 @@ class ItemController extends Controller
         $validated = $request->validate([
             'item_id' => 'required|numeric|digits:16',
             'nama' => 'required|string|min:3',
-            'harga' => 'required|decimal:2|min:1',
+            'harga' => 'required|numeric|min:1',
             'stok' => 'required|numeric|min:1',
         ]);
 
@@ -70,7 +70,7 @@ class ItemController extends Controller
         $validated = $request->validate([
             'item_id' => 'required|numeric|digits:16',
             'nama' => 'required|string|min:3',
-            'harga' => 'required|decimal:2|min:1',
+            'harga' => 'required|numeric|min:1',
             'stok' => 'required|numeric|min:1',
         ]);
 

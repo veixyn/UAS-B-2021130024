@@ -46,7 +46,7 @@ class OrderController extends Controller
             $item->save();
         }
 
-        return redirect()->route('index')->with('success', 'Order Placed.');
+        return redirect()->route('orderList')->with('success', 'Order Placed.');
     }
 
     public function orderList()
@@ -57,6 +57,16 @@ class OrderController extends Controller
 
     public function orderDetail(Order $order)
     {
-        return view('orderDetail', compact('order'));
+        $orderDetails = Order::join('order_item', 'orders.id', '=', 'order_item.order_id')
+            ->join('items', 'order_item.item_id', '=', 'items.id')
+            ->where('orders.id', $order->id)
+            ->get(['order_item.item_id', 'order_item.quantity', 'items.nama', 'items.harga']);
+
+        $total = 0;
+        foreach ($orderDetails as $detail) {
+            $total += $detail->quantity * $detail->harga * 1.11;
+        }
+
+        return view('detail', compact('order', 'orderDetails', 'total'));
     }
 }
