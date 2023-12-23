@@ -56,17 +56,17 @@
 
                 </div>
                 <div class="col-4 text-center">
-                    <a class="blog-header-logo text-dark" href="">Blogging</a>
+                    <a class="blog-header-logo text-dark" href="{{route('index')}}">Order System</a>
                 </div>
     </div>
 
-    <main class="container">
+    <main class="container mt-5">
         @yield('content')
     </main>
 
     <footer class="blog-footer">
         <p>
-            Copyright © {{ date('Y') }} <a href="/">Blogging</a> - <a href="">Subscribe</a>
+            Copyright © {{ date('Y') }} <a href="https://github.com/veixyn/uas-b-2021130024" target="_blank">Tangana Vito Fortunata</a>
         </p>
         <p>
             <a href="#">Back to top</a>
