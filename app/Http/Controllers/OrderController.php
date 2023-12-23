@@ -48,4 +48,15 @@ class OrderController extends Controller
 
         return redirect()->route('index')->with('success', 'Order Placed.');
     }
+
+    public function orderList()
+    {
+        $orders = Order::paginate(10);
+        return view('list', compact('orders'));
+    }
+
+    public function orderDetail(Order $order)
+    {
+        return view('orderDetail', compact('order'));
+    }
 }

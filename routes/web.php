@@ -24,4 +24,6 @@ Route::get('/', [AppController::class, 'index'])->name('index');
 Route::resource('/items', ItemController::class);
 
 Route::get('/order', [OrderController::class, 'order'])->name('order');
+Route::get('/order/list', [OrderController::class, 'orderList'])->name('orderList');
+Route::get('/order/list/{order}', [OrderController::class, 'orderDetail'])->name('orderDetail');
 Route::post('/order', [OrderController::class, 'createOrder'])->name('createOrder');
