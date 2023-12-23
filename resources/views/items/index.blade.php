@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="mt-4 p-5 bg-black text-white rounded">
+    <div class="mt-4 p-5 bg-black text-white rounded w3-animate-opacity">
         <h1>All Items</h1>
         <a href="{{ route('items.create') }}" class="btn btn-primary btn-sm">Add New Item</a>
     </div>
@@ -27,7 +27,7 @@
 
 
 
-    <div class="container mt-5">
+    <div class="container mt-5 w3-animate-opacity">
         <table class="table table-bordered mb-5">
             <thead>
                 <tr class="table-success">

@@ -29,8 +29,3 @@
 <h5 class="m-4 w3-animate-bottom">Total Harga (PPN 11%) : <b>Rp. {{ number_format($total) }}</b></h5>
 
 @endsection
-{{-- <div class="px-2 m-4 w3-animate-bottom">
-    <p>Nama Item: {{ $detail->nama }}
-    Quantity: {{ $detail->quantity }}
-    Subtotal: Rp. {{ number_format($detail->harga * $detail->quantity) }}</p>
-</div> --}}

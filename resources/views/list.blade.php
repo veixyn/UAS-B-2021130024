@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="mt-4 p-5 bg-black text-white rounded">
+<div class="mt-4 p-5 bg-black text-white rounded w3-animate-opacity">
     <h1>All Orders</h1>
     <a href="{{ route('createOrder') }}" class="btn btn-primary btn-sm">Add New Order</a>
 </div>
@@ -24,7 +24,7 @@ role="alert"
 </div>
 @endif
 
-<div class="container mt-2">
+<div class="container mt-2 w3-animate-opacity">
     <table class="table table-bordered mb-5">
         <thead>
             <tr class="table-success">

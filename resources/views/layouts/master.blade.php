@@ -60,11 +60,11 @@
                 </div>
     </div>
 
-    <main class="container mt-5">
+    <main class="container mt-5 w3-animate-opacity">
         @yield('content')
     </main>
 
-    <footer class="blog-footer">
+    <footer class="blog-footer w3-animate-bottom">
         <p>
             Copyright © {{ date('Y') }} <a href="https://github.com/veixyn/uas-b-2021130024" target="_blank">Tangana Vito Fortunata</a>
         </p>
