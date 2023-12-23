@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+
+    protected $fillable =[
+        'status'
+    ];
+
+    public function items()
+    {
+        return $this->belongsToMany(Item::class, 'order_item')->withPivot('quantity');
+    }
 }

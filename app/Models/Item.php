@@ -16,4 +16,9 @@ class Item extends Model
         'harga',
         'stok'
     ];
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
 }

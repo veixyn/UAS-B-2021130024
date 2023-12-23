@@ -19,9 +19,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [AppController::class, 'index']);
+Route::get('/', [AppController::class, 'index'])->name('index');
 
 Route::resource('/items', ItemController::class);
 
-Route::get('/order', [OrderController::class, 'order']);
-Route::get('/order', [OrderController::class, 'createOrder']);
+Route::get('/order', [OrderController::class, 'order'])->name('order');
+Route::post('/order', [OrderController::class, 'createOrder'])->name('createOrder');

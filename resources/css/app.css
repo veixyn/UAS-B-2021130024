@@ -129,3 +129,23 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 3.5rem;
     }
 }
+
+#items-container .item {
+    margin-bottom: 10px; /* Add margin between items for better spacing */
+}
+
+#items-container .item label,
+#items-container .item select,
+#items-container .item input {
+    display: inline-block;
+    vertical-align: top; /* Align elements to the top */
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+#items-container .item select {
+    width: 300px; /* Adjust the width as needed */
+}
+
+#items-container .item input {
+    width: 80px; /* Adjust the width of the quantity input */
+}
